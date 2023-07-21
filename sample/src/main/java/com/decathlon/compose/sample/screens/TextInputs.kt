@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -35,19 +36,19 @@ object TextInputs : Screen {
             title = name,
             onBackClick = {
                 navController?.popBackStack()
-            }
+            },
         ) {
             val painter = rememberVectorPainter(VitaminIcons.Line.Heart)
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(8.dp)
+                    .padding(8.dp),
             ) {
                 item {
                     VitaminTextInputs.Outlined(
                         value = "",
                         label = "Label",
-                        onValueChange = {}
+                        onValueChange = {},
                     )
                 }
                 item {
@@ -60,9 +61,23 @@ object TextInputs : Screen {
                         icon = {
                             Icon(
                                 painter = painter,
-                                contentDescription = null
+                                contentDescription = null,
                             )
-                        }
+                        },
+                    )
+                }
+                item {
+                    VitaminTextInputs.Outlined(
+                        value = "Input",
+                        label = "Label",
+                        onValueChange = {},
+                        counter = 999 to 999,
+                        icon = {
+                            Icon(
+                                painter = painter,
+                                contentDescription = null,
+                            )
+                        },
                     )
                 }
                 item {
@@ -85,7 +100,7 @@ object TextInputs : Screen {
                             }) {
                                 Text(text = "Option 2")
                             }
-                        }
+                        },
                     )
                 }
                 item {
@@ -95,7 +110,7 @@ object TextInputs : Screen {
                         onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        colors = TextInputsState.error()
+                        colors = TextInputsState.error(),
                     )
                 }
                 item {
@@ -105,7 +120,7 @@ object TextInputs : Screen {
                         onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        colors = TextInputsState.success()
+                        colors = TextInputsState.success(),
                     )
                 }
                 item {
@@ -113,7 +128,7 @@ object TextInputs : Screen {
                         value = "",
                         label = "Label",
                         onValueChange = {},
-                        enabled = false
+                        enabled = false,
                     )
                 }
                 item {
@@ -123,7 +138,7 @@ object TextInputs : Screen {
                         onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        enabled = false
+                        enabled = false,
                     )
                 }
                 item {
@@ -143,9 +158,9 @@ object TextInputs : Screen {
                         icon = {
                             Icon(
                                 painter = painter,
-                                contentDescription = null
+                                contentDescription = null,
                             )
-                        }
+                        },
                     )
                 }
                 item {
@@ -168,7 +183,7 @@ object TextInputs : Screen {
                             }) {
                                 Text(text = "Option 2")
                             }
-                        }
+                        },
                     )
                 }
                 item {
@@ -178,7 +193,7 @@ object TextInputs : Screen {
                         onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        colors = TextInputsState.error()
+                        colors = TextInputsState.error(),
                     )
                 }
                 item {
@@ -188,7 +203,7 @@ object TextInputs : Screen {
                         onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        colors = TextInputsState.success()
+                        colors = TextInputsState.success(),
                     )
                 }
                 item {
@@ -196,7 +211,7 @@ object TextInputs : Screen {
                         value = "",
                         label = "Label",
                         onValueChange = {},
-                        enabled = false
+                        enabled = false,
                     )
                 }
                 item {
@@ -206,7 +221,7 @@ object TextInputs : Screen {
                         onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        enabled = false
+                        enabled = false,
                     )
                 }
             }
